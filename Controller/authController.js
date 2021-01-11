@@ -1,9 +1,13 @@
 const userModel = require("../Model/usersModel");
 const jwt = require("jsonwebtoken");
-const { SECRET_KEY , GMAIL_ID , GMAIL_PW } = require("../config/secrets");
+// const { SECRET_KEY , GMAIL_ID , GMAIL_PW } = require("../config/secrets");
 const nodemailer = require("nodemailer");
 // const smtpTransport = require("nodemailer-smtp-transport");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
+let SECRET_KEY = process.env.SECRET_KEY;
+let GMAIL_ID  = process.env.GMAIL_ID;
+let GMAIL_PW = process.env.GMAIL_PW;
 
 async function sendEmail(message) {
   try {
