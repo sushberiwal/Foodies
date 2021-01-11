@@ -25,6 +25,8 @@ app.use("/api/plans" , planRouter);
 app.use("/api/user" , userRouter);
 app.use("" , viewRouter);
 
-app.listen(3000, function () {
+let port = process.env.PORT || 3000;
+
+app.listen(port, function () {
   console.log("server started at port 3000");
 });
