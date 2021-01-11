@@ -26,8 +26,8 @@ async function createPaymentSession(req , res){
               },
             ],
             mode: 'payment',
-            success_url: 'http://localhost:3000/',
-            cancel_url: 'http://localhost:3000/',
+            success_url: 'https://foodieszone.herokuapp.com/',
+            cancel_url: 'https://foodieszone.herokuapp.com/',
         })
         res.json({
             session
@@ -41,5 +41,10 @@ async function createPaymentSession(req , res){
     }
 }
 
+async function checkoutCompleted(req ,res){
+  console.log(...req);
+}
+
 
 module.exports.createPaymentSession = createPaymentSession;
+module.exports.checkoutCompleted = checkoutCompleted;
