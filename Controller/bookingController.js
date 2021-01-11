@@ -43,7 +43,7 @@ async function createPaymentSession(req , res){
 
 async function checkoutCompleted(req ,res){
   console.log("request object");
-  console.log(...req);
+  console.log(req);
 }
 
 
